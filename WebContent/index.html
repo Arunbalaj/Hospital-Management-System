@@ -1,0 +1,62 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+	
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
+    	 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+		
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
+        <script src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
+       
+    <style>
+    
+</style>
+      <script>
+      function saveeid(){
+    	  var email = document.forms["myForm"]["username"].value;
+    	  console.log(email);
+    	  sessionStorage.setItem('userid',email);
+    	 // alert("saved");
+    	  return true;
+      }
+      
+       openPage = function() {
+      location.href ="Patientregs?action=insert";
+      }
+      
+      </script>  
+</head>
+<body>
+<div class="container">
+  <div class="navigation"> 
+	  <a href="#" title="Home">Login</a> 
+
+  </div>
+  <div class="logo"> <b>KMC Hospital</b>  </div>
+  <div class="image"></div>
+  <div class="leftcontent" align="center">
+    <h3>Login</h3>
+    <br><title>Login Page</title>
+
+
+	<form name="myForm" action="servlet1" onsubmit="return saveeid()" method="post">
+UserName:<input type="text" name="username" id="aaa"/><br/><br/>
+Password:<input type="password" name="userpass"/><br/><br/>
+
+&nbsp&nbsp&nbsp&nbsp<input type="submit"  value="login"/>&nbsp&nbsp<a href ="javascript:openPage()">Register </a>
+
+</form>
+<br><br><br><br><br><br><br>
+		</div>
+		</div>
+		
+	</body>
+</html>

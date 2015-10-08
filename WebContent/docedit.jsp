@@ -1,0 +1,96 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
+    	 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+		
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
+        <script src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
+       
+    <style>
+    
+</style>
+ <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<link type="text/css"
+    href="css/ui-lightness/jquery-ui-1.8.18.custom.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+
+     <script>
+        $(function() {
+            $('#dob').datepicker()({
+
+            changeMonth: true,
+            changeYear: true,
+            showOn: 'both'
+            }); 
+        });
+    </script>   
+ <script language="javascript" type="text/javascript">
+
+  Profile = function() {
+  	var email=sessionStorage.getItem('userid');
+  location.href = "Docadcntrl?action=edit&email="+email;
+  }
+
+  Appoin= function() {
+  	var email=sessionStorage.getItem('userid');
+
+  	location.href = "DoctorAppoint?action=edit&email="+email;
+  	}
+  </script> 
+  </head>
+  <body>
+  <div class="container">
+    <div class="navigation"> 
+  	  <a href="Docthome.jsp" title="Home">Home</a> 
+  	  <a href="javascript:Profile()" title="Doctors">Profile</a> 
+  	  <a href="javascript:Appoin()" title="Apointments">Appointments</a> 
+	  <a href="index.html" title="Contact">Logout</a> 
+  </div>
+  <div class="logo"> <b>KMC Hospital</b>  </div>
+  <div class="image"></div>
+  <div class="leftcontent">
+    <h3>EDIT Your Profile</h3>
+    <br>
+   
+
+    <form method="POST" action='Docadcntrl' name="frmAddUser">
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbspUser ID :<input type="text" readonly="readonly" name="userid"
+            value="<c:out value="${user.userid}" />" /> <br /><br /> 
+        First Name : <input
+            type="text" name="firstName"
+            value="<c:out value="${user.firstName}" />" /> &nbsp&nbsp&nbsp
+       &nbsp&nbsp&nbspLast Name : <input
+            type="text" name="lastName"
+            value="<c:out value="${user.lastName}" />" /> <br /> <br />
+        DOB :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input
+            type="text" name="dob" id="dob"
+            value="<fmt:formatDate pattern="MM/dd/yyyy" value="${user.dob}" />" /> 
+       &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Email : <input type="email" name="email"
+            value="<c:out value="${user.email}" />" /> <br /> <br />
+        &nbsp&nbsp&nbsp&nbsp&nbspAddress:
+        <input type="text" name="uadd"  value="<c:out value="${user.address}"/>" /> &nbsp&nbsp&nbsp
+         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPhone:&nbsp<input
+            type="text" name="uphone"  value="<c:out value="${user.phone}"/>" /> <br /> <br />
+        Qualification:<input
+            type="text" name="uqual" value="<c:out value="${user.qualification}"/>" />&nbsp&nbsp&nbsp
+        Specialization:&nbsp<input
+            type="text" name="uspec" value="<c:out value="${user.specialization}"/>" /> <br /> <br />
+            
+            <input type="submit" value="Update" />
+    </form>
+    <div class="footer"> &copy; Copyright:Brainiacs CECS 575 Fall 2014 </div>
+    
+    </div>
+    </div>
+</body>
+</html>

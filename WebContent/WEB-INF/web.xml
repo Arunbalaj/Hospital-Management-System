@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <servlet>
+    <servlet-name>Logincontrol</servlet-name>
+    <servlet-class>controller.Logincontrol</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>Logincontrol</servlet-name>
+    <url-pattern>/servlet1</url-pattern>
+  </servlet-mapping>
+ 
+ 
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+   <servlet>
+    <description></description>
+    <display-name>UserController</display-name>
+    <servlet-name>UserController</servlet-name>
+    <servlet-class>controller.UserController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserController</servlet-name>
+    <url-pattern>/UserController</url-pattern>
+   </servlet-mapping> 
+  
+    <servlet>
+    <description></description>
+    <display-name>Patientcntrl</display-name>
+    <servlet-name>Patientcntrl</servlet-name>
+    <servlet-class>controller.Patientcntrl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Patientcntrl</servlet-name>
+    <url-pattern>/Patientcntrl</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>Logincntl</display-name>
+    <servlet-name>Logincntl</servlet-name>
+    <servlet-class>controller.Logincntl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Logincntl</servlet-name>
+    <url-pattern>/Logincntl</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+   <description></description>
+    <display-name>Appointmentct</display-name>
+    <servlet-name>Appointmentct</servlet-name>
+    <servlet-class>controller.Appointmentct</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Appointmentct</servlet-name>
+    <url-pattern>/Appointmentct</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+   <description></description>
+    <display-name>Reportct</display-name>
+    <servlet-name>Reportct</servlet-name>
+    <servlet-class>controller.Reportct</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Reportct</servlet-name>
+    <url-pattern>/Reportct</url-pattern>
+  </servlet-mapping>
+
+   
+    <servlet>
+   <description></description>
+    <display-name>Docadcntrl</display-name>
+    <servlet-name>Docadcntrl</servlet-name>
+    <servlet-class>controller.Docadcntrl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Docadcntrl</servlet-name>
+    <url-pattern>/Docadcntrl</url-pattern>
+  </servlet-mapping>
+   
+    <servlet>
+   <description></description>
+    <display-name>DoctorAppoint</display-name>
+    <servlet-name>DoctorAppoint</servlet-name>
+    <servlet-class>controller.DoctorAppoint</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DoctorAppoint</servlet-name>
+    <url-pattern>/DoctorAppoint</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+   <description></description>
+    <display-name>Reportmnt</display-name>
+    <servlet-name>Reportmnt</servlet-name>
+    <servlet-class>controller.Reportmnt</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Reportmnt</servlet-name>
+    <url-pattern>/Reportmnt</url-pattern>
+  </servlet-mapping>
+  
+   
+  
+  <servlet>
+   <description></description>
+    <display-name>Patientdocv</display-name>
+    <servlet-name>Patientdocv</servlet-name>
+    <servlet-class>controller.Patientdocv</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Patientdocv</servlet-name>
+    <url-pattern>/Patientdocv</url-pattern>
+  </servlet-mapping>
+
+  
+    <servlet>
+   <description></description>
+    <display-name>Patientprof</display-name>
+    <servlet-name>Patientprof</servlet-name>
+    <servlet-class>controller.Patientprof</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Patientprof</servlet-name>
+    <url-pattern>/Patientprof</url-pattern>
+  </servlet-mapping>
+  
+
+   <servlet>
+   <description></description>
+    <display-name>Appointbypat</display-name>
+    <servlet-name>Appointbypat</servlet-name>
+    <servlet-class>controller.Appointbypat</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Appointbypat</servlet-name>
+    <url-pattern>/Appointbypat</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+   <description></description>
+    <display-name>DocReport</display-name>
+    <servlet-name>DocReport</servlet-name>
+    <servlet-class>controller.DocReport</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DocReport</servlet-name>
+    <url-pattern>/DocReport</url-pattern>
+  </servlet-mapping>
+
+  
+  
+  <servlet>
+   <description></description>
+    <display-name>Patviewbill</display-name>
+    <servlet-name>Patviewbill</servlet-name>
+    <servlet-class>controller.Patviewbill</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Patviewbill</servlet-name>
+    <url-pattern>/Patviewbill</url-pattern>
+  </servlet-mapping>
+  
+  
+   
+  <servlet>
+   <description></description>
+    <display-name>Patientregs</display-name>
+    <servlet-name>Patientregs</servlet-name>
+    <servlet-class>controller.Patientregs</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Patientregs</servlet-name>
+    <url-pattern>/Patientregs</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
